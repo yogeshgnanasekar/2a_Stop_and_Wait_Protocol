@@ -46,8 +46,8 @@ To write a python program to perform stop and wait protocol
            conn, addr = server.accept()
         print(f"Connected with {addr}")
 
-while True:
-    data = conn.recv(1024).decode()
+       while True:
+            data = conn.recv(1024).decode()
 
     if data:
         print(f"Received: {data}")
