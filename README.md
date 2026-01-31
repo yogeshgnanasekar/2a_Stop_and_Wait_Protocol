@@ -12,14 +12,14 @@ To write a python program to perform stop and wait protocol
 
 ## client.py
      import socket
-   import time
+       import time
 
-    client = socket.socket()
+      client = socket.socket()
      client.connect(('localhost', 8000))
      client.settimeout(5)  
 
-while True:
-    msg = input("Enter a message (or type 'exit' to quit): ")
+  while True:
+     msg = input("Enter a message (or type 'exit' to quit): ")
 
     client.send(msg.encode())  
 
@@ -39,12 +39,12 @@ while True:
   ## sever.py
      import socket
 
-    server = socket.socket()
-   server.bind(('localhost', 8000))
-   server.listen(1)
-  print("Server is listening...")
-  conn, addr = server.accept()
-  print(f"Connected with {addr}")
+     server = socket.socket()
+     server.bind(('localhost', 8000))
+     server.listen(1)
+   print("Server is listening...")
+   conn, addr = server.accept()
+   print(f"Connected with {addr}")
 
 while True:
     data = conn.recv(1024).decode()
