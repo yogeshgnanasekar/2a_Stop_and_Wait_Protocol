@@ -18,8 +18,8 @@ To write a python program to perform stop and wait protocol
      client.connect(('localhost', 8000))
      client.settimeout(5)  
 
-  while True:
-     msg = input("Enter a message (or type 'exit' to quit): ")
+      while True:
+         msg = input("Enter a message (or type 'exit' to quit): ")
 
     client.send(msg.encode())  
 
@@ -42,9 +42,9 @@ To write a python program to perform stop and wait protocol
      server = socket.socket()
      server.bind(('localhost', 8000))
      server.listen(1)
-   print("Server is listening...")
-   conn, addr = server.accept()
-   print(f"Connected with {addr}")
+        print("Server is listening...")
+           conn, addr = server.accept()
+        print(f"Connected with {addr}")
 
 while True:
     data = conn.recv(1024).decode()
